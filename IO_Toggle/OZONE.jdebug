@@ -112,8 +112,8 @@ void OnProjectLoad (void) {
 **
 **********************************************************************
 */
-//void AfterTargetReset (void) {
-//}
+void AfterTargetReset (void) {
+}
 
 /*********************************************************************
 *
@@ -184,8 +184,9 @@ void OnProjectLoad (void) {
 *
 **********************************************************************
 */
-//void BeforeTargetDownload (void) {
-//}
+void BeforeTargetDownload (void) {
+Target.EraseChip();
+}
 
 /*********************************************************************
 *
@@ -199,7 +200,7 @@ void OnProjectLoad (void) {
 */
 void AfterTargetDownload (void) {
 
-//Exec.Reset();
+Exec.Reset();
 
 }
 

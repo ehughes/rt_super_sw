@@ -62,12 +62,12 @@ int main(void)
     while (1)
     {
 
-        SysTick_DelayTicks(250);
-
+    	GPIO_PortToggle(GPIO, LCD_BL_PORT, 1u << LCD_BL_PIN);
 
     	GPIO_PortToggle(GPIO, P39_PORT, 1u << P39_PIN);
 
-    	GPIO_PortToggle(GPIO, LCD_BL_PORT, 1u << LCD_BL_PIN);
+    	SysTick_DelayTicks(250);
+
 
     }
 }
